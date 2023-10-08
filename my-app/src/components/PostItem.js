@@ -5,12 +5,13 @@ function PostItem(props) {
   return (
     <div className={css.SearchResults}>
         {props.savedPosts.map(post => {
+                const {title, name, image, description} = post
                 return (
-                    <div key={post} className={css.SearchItem}>
-                        <p>{post.title}</p>
-                        <p>{post.name}</p>
-                        <img src={post.image} alt="random" />
-                        <p>{post.description}</p>
+                    <div key={title} className={css.SearchItem}>
+                        <p>{title}</p>
+                        <p>{name}</p>
+                        <img src={image} alt="random" />
+                        <p>{description}</p>
                     </div>
                 )
             })
